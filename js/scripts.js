@@ -17,8 +17,8 @@
       document.getElementById('guessRemainingBtn').innerHTML = `Out of Guesses!!!`
       return
     }
-    const generatedRandomNumber = '20';
-    // console.log('generatedRandomNumber', Math.floor((Math.random() * 100) + 1))
+    const generatedRandomNumber = Math.floor((Math.random() * 100) + 1);
+    console.log('generatedRandomNumber', Math.floor((Math.random() * 100) + 1))
     const guess = document.getElementById('guess').value
 
     if (guess < generatedRandomNumber) {
@@ -26,7 +26,7 @@
     }
 
     if (guess > generatedRandomNumber) {
-      guessAlertStyle("text-danger h2 col-7", `${guess} was too high`)
+      guessAlertStyle("text-danger h2 col-7", `Your guess of ${guess} was too high`)
     }
 
     if (guess === generatedRandomNumber) {
