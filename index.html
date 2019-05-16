@@ -1,36 +1,58 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+<nav class="navbar navbar-light bg-transparent d-flex justify-content-between">
+  <i class="fas fa-sort-numeric-down fa-5x"></i>
+  <i class="fas fa-user-circle fa-2x"></i>
+  <i class="far fa-envelope fa-2x"></i>
+  <i class="far fa-heart fa-2x"></i>
+  <i class="fas fa-share fa-2x"></i>
+</nav>
 
-<body>
-    <input type="text" id="guess"/>
-    <h1 id="numberOfRemainingGuesses">10</h1>
-    <button onclick="guessNumber()">
-        Guess!
-    </button>
-
-    <div class="alert alert-danger" role="alert" style="visibility: hidden" id="wrongGuess">
-        Your guess was wrong!
+<body
+  style="background-image: url(https://2.bp.blogspot.com/-DdbKZW7XvUw/WpV40p7bvDI/AAAAAAAAiYY/bZmI72NSp70t2BfNRxrVda8cLFahlPP9QCLcBGAs/s1600/watercolour-desktop-wallpaper.jpg)">
+  <p class="display-1 d-flex justify-content-center m-3 ">Number Guessing Game</p>
+ <div class="display-1 d-flex justify-content-center m-3 "> <input type="text" class="d-flex form-control m-3 p-3 col-4" id="guess" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+  placeholder="Choose your number"></div>
+  <div class="row d-flex align-items-center m-3">
+    <div class="left-container col-8">
+      <div class="row m-4 d-flex justify-content-between">
+        <h2 id="guessRemainingBtn" class="alert bg-transparent col-7">
+          You have <span class="badge badge-pill badge-danger" id="numberOfRemainingGuesses">10</span> turns left
+        </h2>
+        <button type="button" class="btn btn-outline-danger col m-3" id="guess-btn" onclick="guessNumber()">GUESS!</button>
+      </div>
+      <div class="row m-4">
+        <div class="alert alert-success col-7" role="alert" style="visibility: hidden;" id="userAlert">
+          You're Correct! You guessed, correctly!
+        </div>
+        <button type="button" class="btn btn-outline-dark col m-3" onclick="resetGame()">Reset Game</button>
+      </div>
     </div>
-
-    <div class="alert alert-success" role="alert" style="visibility: hidden" id="correctGuess">
-            You're Correct! You guessed, correctly!
+    <div class="right-container justify-content-center col row">
+      <div class="col">
+          <h3>Highscore</h3>
+          <div class="alert" role="alert" id="highscore"></div>
+      </div>
+      <div class="col">
+          <h3 class="row">Guessed Number</h3>
+          <div class="h3" id="guessed-number"></div>
+      </div>
     </div>
-    <button onclick="resetGame()">
-        Reset Game!
-    </button>
-
+  </div>
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
