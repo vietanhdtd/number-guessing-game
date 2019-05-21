@@ -33,7 +33,9 @@
       guessAlertStyle("text-success h3 col-7", `${guess} was Correct!!! Congratulation
       <br><small class="text-muted " id='small'>The game will reset in 5 seconds</small>`)
       highscoreList.push(11 - numberOfAvailableGuesses)
-      document.getElementById('highscore').innerHTML = highscoreList.sort(function(a, b){return a - b});
+      document.getElementById('highscore').innerHTML = highscoreList.sort(function (a, b) {
+        return a - b
+      });
       setTimeout(resetGame, 5000);
     }
     for (let i = 0; i < listOfGuessedNumber.length; i++) {
@@ -41,7 +43,7 @@
         guessAlertStyle("text-warning h2 col-7", `You guess ${guess} before`)
         document.getElementById('numberOfRemainingGuesses').innerHTML = numberOfAvailableGuesses;
         inputBlank()
-        return 
+        return
       }
     }
     inputBlank()
@@ -66,3 +68,4 @@
       document.getElementById('guess-btn').click();
     }
   })
+  

@@ -22,17 +22,20 @@
 </nav>
 
 <body
-  style="background-image: url(https://2.bp.blogspot.com/-DdbKZW7XvUw/WpV40p7bvDI/AAAAAAAAiYY/bZmI72NSp70t2BfNRxrVda8cLFahlPP9QCLcBGAs/s1600/watercolour-desktop-wallpaper.jpg)">
+  style="background-image: url(https://2.bp.blogspot.com/-DdbKZW7XvUw/WpV40p7bvDI/AAAAAAAAiYY/bZmI72NSp70t2BfNRxrVda8cLFahlPP9QCLcBGAs/s1600/watercolour-desktop-wallpaper.jpg)"
+  style="background-size:cover; background-repeat: no-repeat">
   <p class="display-1 d-flex justify-content-center m-3 ">Number Guessing Game</p>
- <div class="display-1 d-flex justify-content-center m-3 "> <input type="text" class="d-flex form-control m-3 p-3 col-4" id="guess" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
-  placeholder="Choose your number"></div>
+  <div class="display-1 d-flex justify-content-center m-3 "> <input type="text"
+      class="d-flex form-control m-3 p-3 col-4" id="guess" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg" placeholder="Choose your number"></div>
   <div class="row d-flex align-items-center m-3">
     <div class="left-container col-8">
       <div class="row m-4 d-flex justify-content-between">
         <h2 id="guessRemainingBtn" class="alert bg-transparent col-7">
           You have <span class="badge badge-pill badge-danger" id="numberOfRemainingGuesses">10</span> turns left
         </h2>
-        <button type="button" class="btn btn-outline-danger col m-3" id="guess-btn" onclick="guessNumber()">GUESS!</button>
+        <button type="button" class="btn btn-outline-danger col m-3" id="guess-btn"
+          onclick="guessNumber()">GUESS!</button>
       </div>
       <div class="row m-4">
         <div class="alert alert-success col-7" role="alert" style="visibility: hidden;" id="userAlert">
@@ -41,14 +44,14 @@
         <button type="button" class="btn btn-outline-dark col m-3" onclick="resetGame()">Reset Game</button>
       </div>
     </div>
-    <div class="right-container justify-content-center col row">
+    <div class="right-container justify-content-center col col">
       <div class="col">
-          <h3>Highscore</h3>
-          <div class="alert" role="alert" id="highscore"></div>
+        <h3>Highscore</h3>
+        <div class="alert" role="alert" id="highscore"></div>
       </div>
       <div class="col">
-          <h3 class="row">Guessed Number</h3>
-          <div class="h3" id="guessed-number"></div>
+        <h3 class="row">Guessed Number</h3>
+        <div class="h3" id="guessed-number"></div>
       </div>
     </div>
   </div>
